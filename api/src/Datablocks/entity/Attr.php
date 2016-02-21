@@ -40,12 +40,20 @@ class Attr {
 	 * @var string @Column(type="boolean")
 	 */
 	private $set;
-	public function __construct($id = 0, $name = 0, $access = 0, $get = 0, $set = 0, $classEntity = null) {
+	/**
+	 *
+	 * @var string 
+	 * @Column(type="string", length=255)
+	 */
+	private $type;
+	
+	public function __construct($id = 0, $name = 0, $access = 0, $get = 0, $set = 0,$type="", $classEntity = null) {
 		$this->id = $id;
 		$this->name = $name;
 		$this->access = $access;
 		$this->get = $get;
 		$this->set = $set;
+		$this->type = $type;
 		$this->classEntity = $classEntity;
 	}
 	public function getId() {
@@ -77,6 +85,12 @@ class Attr {
 	}
 	public function setSet($set) {
 		$this->set = $set;
+	}
+	public function getType() {
+		return $this->type;
+	}
+	public function setType($type) {
+		$this->type = $type;
 	}
 	public function getClassEntity() {
 		return $this->classEntity;
