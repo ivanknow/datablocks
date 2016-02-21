@@ -4,14 +4,17 @@
 
 (function() {
 
-	var app = angular.module("datablocks", []);
-	app.controller("ProjectCtrl", function(datablocksApi) {
+	var app = angular.module("datablocks", ["ngRoute"]);
+	app.controller("ProjectCtrl", function(datablocksApi,$location) {
 		var vm = this;
-
+        vm.current = {};
         vm.projects = datablocksApi.getAllProjects();
 		vm.title = "Datablocks";
 
-		vm.add = function() {
+		vm.newProject = function() {
+			datablocksApi.insertProject(vm.current);
+			vm.current = {};
+			$location.path("/projects");
 			
 		}
 

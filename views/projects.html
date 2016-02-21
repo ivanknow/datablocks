@@ -1,5 +1,8 @@
+<div class="container">
+<a href="#/newproject" class="btn btn-primary">New Project</a>
+</div>
 <table class="table" ng-controller="ProjectCtrl as vm">
   <tr ng-repeat="project in vm.projects">
-      <td>{{project.name}}     </td>
+      <td><a href="#/project/{{project.id}}">{{project.name}}</a>     </td>
   </tr>
 </table>

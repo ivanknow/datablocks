@@ -17,7 +17,8 @@
 			    }
 			    
 			     function insertProject(project){
-			      return {};  
+			         project.id = self.projects.length;
+			         self.projects.push(project);
 			    }
 			    function removeProject(id){
 			      return {};  
