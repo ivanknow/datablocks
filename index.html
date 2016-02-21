@@ -3,11 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Datablocks</title>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 <body ng-app="datablocks">
 
-<div ng-controller="ProjectCtrl as vm">
-{{vm.title}}
+<div  ng-controller="ProjectCtrl as vm">
+<div style="background:#773322; padding:10px;color:white;">
+<h1>{{vm.title}}</h1>
+</div>
+
+<table class="table" ng-controller="ProjectCtrl as vm">
+  <tr ng-repeat="project in vm.projects">
+      <td>{{project.name}}     </td>
+  </tr>
+</table>
+
+
 </div>
 
 <script src="lib/angular/angular.min.js"></script>

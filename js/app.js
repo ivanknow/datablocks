@@ -5,10 +5,11 @@
 (function() {
 
 	var app = angular.module("datablocks", []);
-	app.controller("ProjectCtrl", function() {
+	app.controller("ProjectCtrl", function(datablocksApi) {
 		var vm = this;
 
-		vm.title = "Hello Datablocks - Front-end just tomorrow";
+        vm.projects = datablocksApi.getAllProjects();
+		vm.title = "Datablocks";
 
 		vm.add = function() {
 			
