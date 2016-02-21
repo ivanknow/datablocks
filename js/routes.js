@@ -12,6 +12,7 @@ angular.module('datablocks').config(function($routeProvider){
 			templateUrl : "views/project.html",
 			
 		});
+
 		
 		$routeProvider.otherwise({redirectTo:"/projects"});
 	});

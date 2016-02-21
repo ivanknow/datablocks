@@ -1,1 +1,7 @@
-nada
+<div ng-controller="SelectedProjectCtrl as vm">
+<h3>Project:{{vm.project.name}}</h3>
+<h4>Classes</h4>
+<ul>
+<li ng-repeat="classe in vm.project.classes "></li>
+</ul>
+</div>

@@ -2,11 +2,12 @@
 
 namespace Datablocks\entity;
 
+use Datablocks\core\AbstractEntity;
 /**
  * @Entity
  * @Table(name="classentity")
  */
-class ClassEntity {
+class ClassEntity extends AbstractEntity{
 	
 	/**
 	 *

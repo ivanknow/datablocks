@@ -7,7 +7,7 @@ class Config {
 			"database" => array (
 					'dbname' => 'datablocks',
 					'user' => 'root',
-					'password' => '123456',
+					'password' => '',
 					'host' => 'localhost',
 					'driver' => 'pdo_mysql' 
 			),

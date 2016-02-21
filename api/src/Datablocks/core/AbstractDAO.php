@@ -56,5 +56,5 @@ abstract class AbstractDAO {
 	public function getEntityManager(){
 		return $this->entityManager;
 	}
-	abstract public function validateType($obj);
+	
 }

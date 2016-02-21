@@ -1,11 +1,13 @@
 <?php
 namespace Datablocks\entity;
 
+use Datablocks\entity;
+use Datablocks\core\AbstractEntity;
 /**
  * @Entity
  * @Table(name="project")
  */
-class Project {
+class Project extends AbstractEntity{
 
 	/**
 	 *

@@ -3,12 +3,12 @@
 namespace Datablocks\resource;
 
 use Datablocks\core\AbstractResource;
-use Datablocks\dao\ProjectDAO;
-use Datablocks\entity\Project;
+use Datablocks\dao\ClassDAO;
+use Datablocks\entity\ClassEntity;
 
-class ProjectResource extends AbstractResource{
+class ClassResource extends AbstractResource{
 	public function __construct() {
-		$this->setDao ( new ProjectDAO() );
+		$this->setDao ( new ClassDAO() );
 	}
 	public function get($id) {
 		if ($id === null) {
@@ -31,9 +31,9 @@ class ProjectResource extends AbstractResource{
 		return $data;
 	}
 	public function post($json) {
-		$project = new Project();
-		$project->setName($json->name);
-		$this->getDao ()->persist ( $project );
+		$classEntity = new ClassEntity();
+		$classEntity->setName($json->name);
+		$this->getDao ()->persist ( $classEntity );
 		return ["msg"=>"OK"];
 	}
 	public function put($id, $json) {

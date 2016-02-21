@@ -18,7 +18,7 @@ $config = Setup::createAnnotationMetadataConfiguration ( array (
 $conn = array (
 		'dbname' => 'datablocks',
 		'user' => 'root',
-		'password' => '123456',
+		'password' => '',
 		'host' => 'localhost',
 		'driver' => 'pdo_mysql' 
 );

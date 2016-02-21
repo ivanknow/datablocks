@@ -1,6 +1,6 @@
 <?php
 
-namespace Professore\DAO;
+namespace Datablocks\dao;
 
 use Datablocks\entity\Project;
 use Datablocks\core\AbstractDAO;
